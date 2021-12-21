@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace BankApp
 {
@@ -6,7 +7,11 @@ namespace BankApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var calc = new Calculator();
+
+            calc.GetStandartAccount(new Account());
+
+            calc.GetSalaryAccount(new Account());
         }
     }
 }

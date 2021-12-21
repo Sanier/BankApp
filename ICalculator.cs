@@ -8,6 +8,6 @@ namespace BankApp
 {
     public interface ICalculator
     {
-        void CalculateInterest(ICalculator calculator);
+        void CalculateInterest(Account account);
     }
 }

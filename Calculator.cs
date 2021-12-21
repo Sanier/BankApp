@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace BankApp
 {
-    public class Calculator : ICalculator
+    public class Calculator
     {
-        public void CalculateInterest(ICalculator calculator)
+        StandartAccountCalc standartAccount = new StandartAccountCalc();
+        SalaryAccountCalc salaryAccount = new SalaryAccountCalc();
+        public void GetStandartAccount(Account account)
         {
-            throw new NotImplementedException();
+            standartAccount.CalculateInterest(account);
         }
+
+        public void GetSalaryAccount(Account account)
+        {
+            salaryAccount.CalculateInterest(account);
+        }
+
     }
 }
